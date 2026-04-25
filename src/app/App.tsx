@@ -13,7 +13,7 @@ export default function App() {
     document.getElementsByTagName('head')[0].appendChild(link);
 
     // Set page title
-    document.title = 'كفى - الحل الرقمي لإدارة النفايات الدوائية';
+    document.title = ' Kafa ';
   }, []);
 
   return (
