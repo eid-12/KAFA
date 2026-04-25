@@ -1,15 +1,16 @@
-# Stage 1: Build
-FROM maven:3.8.5-openjdk-17 AS build
+# Stage 1: Build the React/Vite app
+FROM node:20-alpine AS build
+WORKDIR /app
+COPY package.json pnpm-lock.yaml* ./
+# إذا تستخدم pnpm (واضح من ملف pnpm-workspace)
+RUN npm install -g pnpm && pnpm install
 COPY . .
-RUN mvn clean package -DskipTests
+RUN pnpm build
 
-# Stage 2: Run
-# استبدلنا النسخة القديمة بنسخة مدعومة ومستقرة
-FROM eclipse-temurin:17-jre-alpine
-COPY --from=build /target/*.jar app.jar
-
-# بما أنك تبي بدون بورت، التطبيق داخلياً بيشتغل على 8080
-# والـ Nginx Proxy Manager هو اللي بيحول له الطلبات
-EXPOSE 8080
-
-ENTRYPOINT ["java", "-jar", "/app.jar"]
+# Stage 2: Serve the app with Nginx
+FROM nginx:stable-alpine
+# نسخ ملفات الـ build لمجلد Nginx
+COPY --from=build /app/dist /usr/share/nginx/html
+# نسخ إعدادات Nginx (اختياري، بس الأفضل نستخدم الافتراضي حالياً)
+EXPOSE 80
+CMD ["nginx", "-g", "daemon off;"]
