@@ -1,11 +1,39 @@
+# KAFA | Pharmaceutical Waste Management Platform 🌿
 
-  # إنشاء منصة كفى لإدارة النفايات
+KAFA (كفى) is an innovative digital solution designed to tackle the environmental and economic challenges of pharmaceutical waste. The platform facilitates the safe disposal, donation, and tracking of surplus medications, promoting sustainability and health safety within the community.
 
-  This is a code bundle for إنشاء منصة كفى لإدارة النفايات. The original project is available at https://www.figma.com/design/yM1j0KqmelFa20C1Ji7CzN/%D8%A5%D9%86%D8%B4%D8%A7%D8%A1-%D9%85%D9%86%D8%B5%D8%A9-%D9%83%D9%81%D9%89-%D9%84%D8%A5%D8%AF%D8%A7%D8%B1%D8%A9-%D8%A7%D9%84%D9%86%D9%81%D8%A7%D9%8A%D8%A7%D8%AA.
+---
 
-  ## Running the code
+## 🚀 Overview
 
-  Run `npm i` to install the dependencies.
+This project was developed as part of the **stc Impact-U** program to digitize the pharmaceutical waste lifecycle. It leverages modern web technologies to provide a seamless experience for users, healthcare providers, and environmental agencies.
 
-  Run `npm run dev` to start the development server.
-  
+### Key Features
+* **Smart Waste Tracking:** Real-time monitoring of pharmaceutical waste collection.
+* **Donation Gateway:** A secure path for donating usable surplus medications.
+* **Environmental Impact Dashboard:** Visualizing data on waste reduction and sustainability metrics.
+* **Automated Workflows:** Integrated CI/CD and containerized deployment for high availability.
+
+---
+
+## 🛠️ Tech Stack
+
+* **Frontend:** [React.js](https://reactjs.org/) + [Vite](https://vitejs.dev/)
+* **Language:** [TypeScript](https://www.typescriptlang.org/)
+* **UI Components:** [Shadcn UI](https://ui.shadcn.com/) & [Tailwind CSS](https://tailwindcss.com/)
+* **DevOps:** [Docker](https://www.docker.com/), [GitHub Actions](https://github.com/features/actions), & [Nginx](https://www.nginx.com/)
+* **Design:** [Figma Architecture](https://www.figma.com/design/yM1j0KqmelFa20C1Ji7CzN/)
+
+---
+
+## ⚙️ Getting Started
+
+### Prerequisites
+Ensure you have [Node.js](https://nodejs.org/) and [pnpm](https://pnpm.io/) (preferred) or `npm` installed.
+
+### Installation
+
+1. **Clone the repository:**
+   ```bash
+   git clone [https://github.com/eid-12/KAFA.git](https://github.com/eid-12/KAFA.git)
+   cd KAFA
