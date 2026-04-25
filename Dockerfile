@@ -1,14 +1,15 @@
-# الـ Build stage
+# Stage 1: Build
 FROM maven:3.8.5-openjdk-17 AS build
 COPY . .
 RUN mvn clean package -DskipTests
 
-# الـ Run stage
-FROM openjdk:17-jdk-slim
+# Stage 2: Run
+# استبدلنا النسخة القديمة بنسخة مدعومة ومستقرة
+FROM eclipse-temurin:17-jre-alpine
 COPY --from=build /target/*.jar app.jar
 
-# هنا السر: نخلي التطبيق يشتغل على بورت 80 (البورت الافتراضي للويب)
-ENV SERVER_PORT=80
-EXPOSE 80
+# بما أنك تبي بدون بورت، التطبيق داخلياً بيشتغل على 8080
+# والـ Nginx Proxy Manager هو اللي بيحول له الطلبات
+EXPOSE 8080
 
 ENTRYPOINT ["java", "-jar", "/app.jar"]
