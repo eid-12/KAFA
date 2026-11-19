@@ -1,6 +1,6 @@
 # KAFA | Pharmaceutical Waste Management Platform 🌿
 
-KAFA (كفى) is an innovative digital solution designed to tackle the environmental and economic challenges of pharmaceutical waste. The platform facilitates the safe disposal, donation, and tracking of surplus medications, promoting sustainability and health safety within the community.
+KAFA is an innovative digital solution designed to tackle the environmental and economic challenges of pharmaceutical waste. The platform facilitates the safe disposal, donation, and tracking of surplus medications, promoting sustainability and health safety within the community.
 
 ---
 
