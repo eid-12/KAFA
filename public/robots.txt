@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://kafa.cloudbase.website/sitemap.xml
